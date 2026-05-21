@@ -47,9 +47,3 @@ Edit `config.py` to tune sensitivity:
 Smaller values = more sensitive. Calibrating first is strongly recommended.
 
 ---
-
-## Requirements
-
-- macOS 12+
-- Built-in or external webcam
-- Python 3.10+
