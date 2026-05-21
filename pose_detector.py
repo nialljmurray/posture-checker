@@ -10,7 +10,7 @@ _MODEL_URL = (
     "https://storage.googleapis.com/mediapipe-models/"
     "pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task"
 )
-_MODEL_PATH = Path(getattr(sys, "_MEIPASS", Path(__file__).parent)) / "pose_landmarker_lite.task"
+_MODEL_PATH = Path(__file__).parent / "pose_landmarker_lite.task"
 
 # Pairs of landmark indices to draw as skeleton lines
 _CONNECTIONS = [
