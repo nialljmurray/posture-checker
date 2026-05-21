@@ -13,17 +13,11 @@ A real-time posture monitoring tool for macOS. Uses your MacBook's built-in came
 - Native macOS notifications with a configurable cooldown
 - Personal calibration — set your own good-posture baseline
 
-## Download
-
-Grab the latest `PostureChecker-macOS.zip` from the [Releases](../../releases) page, unzip it, and double-click `PostureChecker.app`.
-
-> **First launch:** macOS will block an unsigned app. Right-click → **Open**, then click **Open** in the dialog.
-
----
-
-## Run from source
+## Setup
 
 ```bash
+git clone https://github.com/nialljmurray/posture-checker.git
+cd posture-checker
 pip install -r requirements.txt
 python main.py
 ```
@@ -60,4 +54,4 @@ Smaller values = more sensitive. Calibrating first is strongly recommended.
 
 - macOS 12+
 - Built-in or external webcam
-- Python 3.10+ (if running from source)
+- Python 3.10+
