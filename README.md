@@ -1,0 +1,63 @@
+# Posture Checker
+
+A real-time posture monitoring tool for macOS. Uses your MacBook's built-in camera and MediaPipe Pose to detect bad sitting posture and send native notifications.
+
+![macOS](https://img.shields.io/badge/macOS-12%2B-blue) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+
+---
+
+## Features
+
+- Live camera feed with skeleton overlay
+- Detects uneven shoulders, head tilt, and hunching
+- Native macOS notifications with a configurable cooldown
+- Personal calibration — set your own good-posture baseline
+
+## Download
+
+Grab the latest `PostureChecker-macOS.zip` from the [Releases](../../releases) page, unzip it, and double-click `PostureChecker.app`.
+
+> **First launch:** macOS will block an unsigned app. Right-click → **Open**, then click **Open** in the dialog.
+
+---
+
+## Run from source
+
+```bash
+pip install -r requirements.txt
+python main.py
+```
+
+macOS will prompt for camera permission on first run.
+
+### Controls
+
+| Key | Action |
+|-----|--------|
+| `c` | Calibrate — sit up straight first |
+| `q` | Quit |
+
+---
+
+## Configuration
+
+Edit `config.py` to tune sensitivity:
+
+| Constant | Default | Effect |
+|---|---|---|
+| `CHECK_INTERVAL` | `3.0 s` | How often posture is evaluated |
+| `NOTIFICATION_COOLDOWN` | `60.0 s` | Minimum gap between alerts |
+| `SHOULDER_TILT_TOLERANCE` | `0.025` | Sensitivity to uneven shoulders |
+| `EAR_TILT_TOLERANCE` | `0.025` | Sensitivity to head tilt |
+| `NECK_GAP_TOLERANCE` | `0.03` | Sensitivity to hunching |
+| `HEAD_DROP_TOLERANCE` | `0.02` | Sensitivity to looking down |
+
+Smaller values = more sensitive. Calibrating first is strongly recommended.
+
+---
+
+## Requirements
+
+- macOS 12+
+- Built-in or external webcam
+- Python 3.10+ (if running from source)
