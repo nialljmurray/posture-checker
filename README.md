@@ -2,8 +2,6 @@
 
 A real-time posture monitoring tool for macOS. Uses your MacBook's built-in camera and MediaPipe Pose to detect bad sitting posture and send native notifications.
 
-![macOS](https://img.shields.io/badge/macOS-12%2B-blue) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-
 ---
 
 ## Features
